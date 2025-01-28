@@ -1,0 +1,129 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- Поля для добавления доходов -->
+    <EditText
+        android:id="@+id/etIncomeAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/income_amount_hint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etIncomeMonth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/income_month_hint"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnAddIncome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_income_button" />
+
+    <!-- Поля для добавления расходов -->
+    <EditText
+        android:id="@+id/etExpenseAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/expense_amount_hint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/etExpenseCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/expense_category_hint"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/btnAddExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_expense_button" />
+
+    <!-- Поля для добавления категории -->
+    <EditText
+        android:id="@+id/etCategoryName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/category_name_hint"
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize"
+        android:autofillHints="" />
+
+
+    <EditText
+        android:id="@+id/etCategoryBudget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/category_budget_hint"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:ignore="VisualLintTextFieldSize"
+        android:autofillHints="" />
+
+
+    <Button
+        android:id="@+id/btnAddCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_category_button" />
+
+    <!-- Список категорий -->
+    <ListView
+        android:id="@+id/lvCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Аналитика -->
+    <TextView
+        android:id="@+id/tvTotalIncome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total_income_label" />
+
+    <TextView
+        android:id="@+id/tvTotalExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total_expense_label" />
+
+    <TextView
+        android:id="@+id/tvBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/balance_label" />
+
+    <Button
+        android:id="@+id/btnResetData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сбросить данные"
+        android:layout_marginTop="16dp"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
